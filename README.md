@@ -1,6 +1,6 @@
-# Image-to-Code with Google Gemini 2.5 Pro 🎨→💻
+# Image-to-Code 
 
-Convert UI screenshots into production-ready code using Google Gemini 2.5 Pro AI!
+Convert UI screenshots into production-ready code 
 
 ## ✨ Features
 
@@ -14,7 +14,6 @@ Convert UI screenshots into production-ready code using Google Gemini 2.5 Pro AI
   - Vue 3 (Composition API)
   - Tailwind (pure utility classes)
 - 🎨 **Live Preview** - Real-time browser preview of generated UI
-- 💰 **100% FREE** - Google Gemini API (1500 requests/day, 15/minute)
 
 ## 🚀 Quick Start
 
