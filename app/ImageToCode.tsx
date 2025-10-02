@@ -61,20 +61,6 @@ export default function ImageToCode() {
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Transform UI screenshots into production-ready React + Tailwind CSS code using AI
           </p>
-          <div className="mt-6 flex items-center justify-center gap-4 text-sm text-gray-500">
-            <div className="flex items-center gap-2">
-              <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              <span>Gemini 2.5 Pro (FREE)</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <svg className="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
-              </svg>
-              <span>1500 requests/day</span>
-            </div>
-          </div>
         </div>
 
         {/* Upload Section */}
@@ -284,12 +270,7 @@ export default function ImageToCode() {
           </div>
         )}
 
-        {/* Footer */}
-        <div className="mt-12 text-center">
-          <p className="text-sm text-gray-500">
-            Powered by <span className="font-semibold text-green-600">Google Gemini 2.5 Pro</span> - 100% FREE
-          </p>
-        </div>
+
       </div>
     </div>
   );
