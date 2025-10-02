@@ -42,7 +42,7 @@ Open http://localhost:3006 and start converting! 🎉
 
 - Node.js 18+ 
 - npm or yarn
-- Google Gemini API key (100% FREE - 1500 requests/day)
+- Google Gemini API key
 
 
 ## 🏗️ Tech Stack
