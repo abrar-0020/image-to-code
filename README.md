@@ -44,13 +44,6 @@ Open http://localhost:3006 and start converting! 🎉
 - npm or yarn
 - Google Gemini API key (100% FREE - 1500 requests/day)
 
-## 💰 Pricing
-
-**100% FREE** with generous limits:
-- 1500 requests per day
-- 15 requests per minute
-- No credit card required
-- Perfect for development and testing
 
 ## 🏗️ Tech Stack
 
