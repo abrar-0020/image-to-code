@@ -32,14 +32,14 @@ export default function ImageToCode() {
       });
       if (!res.ok) {
         const errorData = await res.json();
-        throw new Error(errorData.error || 'AI code generation error');
+        throw new Error(errorData.details || errorData.error || 'AI code generation error');
       }
       const data = await res.json();
       setGeneratedCode(data);
       setActiveTab('react'); // Default to React tab
     } catch (err: any) {
-      // Silently ignore errors - will use demo code
-      console.log('Code generation error (using demo):', err.message);
+      console.error('Code generation error:', err);
+      setError(err.message || 'Failed to generate code. Please try again.');
     } finally {
       setLoading(false);
     }
@@ -244,9 +244,26 @@ export default function ImageToCode() {
               </div>
               <div className="bg-gradient-to-b from-gray-50 to-gray-100 p-4">
                 <div className="bg-white rounded-lg shadow-2xl overflow-hidden border border-gray-200" style={{ height: '600px' }}>
-                  {/* Always show the complete HTML version - full working UI */}
+                  {/* Combined HTML + CSS for proper rendering */}
                   <iframe
-                    srcDoc={generatedCode.html}
+                    srcDoc={`
+                      <!DOCTYPE html>
+                      <html>
+                        <head>
+                          <meta charset="UTF-8">
+                          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                          <style>
+                            ${generatedCode.css || ''}
+                          </style>
+                        </head>
+                        <body>
+                          ${generatedCode.html || ''}
+                          <script>
+                            ${generatedCode.javascript || ''}
+                          </script>
+                        </body>
+                      </html>
+                    `}
                     className="w-full h-full border-0"
                     title="Live Preview - Complete Working UI"
                     sandbox="allow-scripts allow-same-origin allow-forms allow-modals allow-popups"
@@ -263,7 +280,7 @@ export default function ImageToCode() {
                     </svg>
                     <span>Fully functional UI with working interactions</span>
                   </div>
-                  <span className="text-gray-400">Generated from HTML format</span>
+                  <span className="text-gray-400">HTML + CSS + JavaScript combined</span>
                 </div>
               </div>
             </div>
